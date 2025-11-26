@@ -1,0 +1,1926 @@
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三峡石韵 - 石文化与乡村美学项目</title>
+    <script src="https://res.gemcoder.com/js/reload.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              stone: {
+                50: '#fafaf9',
+                100: '#f5f5f4',
+                200: '#e7e5e4',
+                300: '#d6d3d1',
+                400: '#a8a29e',
+                500: '#78716c',
+                600: '#57534e',
+                700: '#44403c',
+                800: '#292524',
+                900: '#1c1917'
+              },
+              earth: {
+                100: '#f7f3eb',
+                200: '#e6d9c5',
+                300: '#d4b98c',
+                400: '#c29748',
+                500: '#b07d22',
+                600: '#9a6c1e',
+                700: '#7c571a',
+                800: '#634717',
+                900: '#523c16'
+              },
+              nature: {
+                100: '#f0fdf4',
+                200: '#bbf7d0',
+                300: '#86efac',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+                800: '#166534',
+                900: '#14532d'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              serif: ['Noto Serif SC', 'serif']
+            },
+            spacing: {
+              '128': '32rem'
+            },
+            backgroundImage: {
+              'stone-pattern': "url('https://picsum.photos/id/106/1200/800')"
+            }
+          }
+        }
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+          .content-auto {
+              content-visibility: auto;
+          }
+          .text-shadow {
+              text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          }
+          .text-shadow-lg {
+              text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+          }
+          .bg-blur {
+              backdrop-filter: blur(8px);
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+          }
+          .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+          }
+          .stone-texture {
+              background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmMGYwZjAiPjwvcmVjdD4KPC9zdmc+');
+          }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-stone-50 text-stone-800 overflow-x-hidden">
+    <!-- [MODULE] a1b_主内容区域 -->
+    <div class="min-h-screen flex flex-col">
+      <!-- [MODULE] c2d_头部导航栏 -->
+      <header
+        id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-transparent"
+      >
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-10 h-10 rounded-full bg-earth-400 flex items-center justify-center"
+            >
+              <i class="fas fa-mountain text-white text-xl"> </i>
+            </div>
+            <span
+              class="text-2xl font-serif font-bold text-white text-shadow-lg"
+            >
+              三峡石韵
+            </span>
+          </div>
+          <!-- 桌面导航 -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="#overview"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              项目概述
+            </a>
+            <a
+              href="#introduction"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              项目介绍
+            </a>
+            <a
+              href="#museum"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              记忆馆
+            </a>
+            <a
+              href="#products"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              文创产品
+            </a>
+            <a
+              href="#healing"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              疗愈空间
+            </a>
+            <a
+              href="#cooperation"
+              class="text-white hover:text-earth-300 transition-colors duration-300 text-shadow"
+            >
+              合作参与
+            </a>
+          </nav>
+          <!-- 移动端菜单按钮 -->
+          <button id="menu-toggle" class="md:hidden text-white text-2xl">
+            <i class="fas fa-bars"> </i>
+          </button>
+        </div>
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-900/95 bg-blur">
+          <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <a
+              href="#overview"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2 border-b border-stone-700"
+            >
+              项目概述
+            </a>
+            <a
+              href="#introduction"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2 border-b border-stone-700"
+            >
+              项目介绍
+            </a>
+            <a
+              href="#museum"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2 border-b border-stone-700"
+            >
+              记忆馆
+            </a>
+            <a
+              href="#products"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2 border-b border-stone-700"
+            >
+              文创产品
+            </a>
+            <a
+              href="#healing"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2 border-b border-stone-700"
+            >
+              疗愈空间
+            </a>
+            <a
+              href="#cooperation"
+              class="text-white hover:text-earth-300 transition-colors duration-300 py-2"
+            >
+              合作参与
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- [/MODULE] c2d_头部导航栏 -- 透明背景，随着滚动固定，包含项目名称、导航链接和响应式菜单按钮 -->
+      <!-- [MODULE] e3f_项目概述部分 -->
+      <section
+        id="overview"
+        class="relative h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://design.gemcoder.com/staticResource/echoAiSystemImages/c22bba5429f9ecccc39aa5b0007bdd86.png"
+            alt="三峡景观"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-stone-900/50"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center">
+          <h1
+            class="text-[clamp(2.5rem,6vw,4.5rem)] font-serif font-bold text-white mb-6 leading-tight text-shadow-lg animate-fade-in"
+          >
+            让石韵文化与乡村美学
+            <br />
+            在现代生活中生根发芽
+          </h1>
+          <p
+            class="text-[clamp(1rem,2vw,1.25rem)] text-stone-100 max-w-3xl mx-auto mb-10 text-shadow"
+          >
+            三峡石韵项目致力于挖掘三峡石文化的深厚底蕴，将传统工艺与现代设计相结合，打造独特的乡村美学体验，促进文化传承与乡村振兴。
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#introduction"
+              class="px-8 py-3 bg-earth-500 hover:bg-earth-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              了解更多
+            </a>
+            <a
+              href="#cooperation"
+              class="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+            >
+              立即参与
+            </a>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <a href="#introduction" class="text-white text-3xl">
+            <i class="fas fa-chevron-down"> </i>
+          </a>
+        </div>
+      </section>
+      <!-- [/MODULE] e3f_项目概述部分 -- 大图展示三峡景观，包含欢迎语和CTA按钮，引导用户深入了解 -->
+      <!-- [MODULE] g4h_项目介绍部分 -->
+      <section id="introduction" class="py-20 bg-stone-100">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2
+              class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-stone-800 mb-4"
+            >
+              项目介绍
+            </h2>
+            <div class="w-24 h-1 bg-earth-500 mx-auto"></div>
+          </div>
+          <!-- 文化传承模块 -->
+          <div
+            class="grid md:grid-cols-2 gap-12 items-center mb-24 opacity-0 transform translate-y-10 transition-all duration-700"
+            data-animate
+          >
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-stone-800 mb-4">
+                文化传承
+              </h3>
+              <p class="text-stone-600 mb-6 leading-relaxed">
+                三峡石文化源远流长，是三峡地区人民智慧的结晶。我们致力于收集、整理和研究三峡石文化，通过现代科技手段对传统石雕工艺进行数字化保护，建立"物灵档案"，让珍贵的文化遗产得以永久保存和传承。
+              </p>
+              <p class="text-stone-600 leading-relaxed">
+                项目团队与当地老艺人合作，记录传统石雕技艺，培养年轻传承人，举办石文化展览和讲座，让更多人了解和喜爱这一独特的文化遗产。
+              </p>
+            </div>
+            <div
+              class="rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]"
+            >
+              <img
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/c8689be11537c8d6ef1dcebf8967e628.png"
+                alt="传统石雕工艺"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <!-- 生态保护模块 -->
+          <div
+            class="grid md:grid-cols-2 gap-12 items-center mb-24 opacity-0 transform translate-y-10 transition-all duration-700"
+            data-animate
+          >
+            <div class="md:order-2">
+              <h3 class="text-2xl font-serif font-bold text-stone-800 mb-4">
+                生态保护
+              </h3>
+              <p class="text-stone-600 mb-6 leading-relaxed">
+                我们坚持"绿水青山就是金山银山"的发展理念，在开发利用三峡石资源的同时，高度重视生态环境保护。项目采用可持续的石材采集方式，严格控制开采规模，保护山体植被和生态平衡。
+              </p>
+              <p class="text-stone-600 leading-relaxed">
+                通过生态修复工程，对已开采区域进行植被恢复，促进生态系统的自我修复和再生。我们相信，只有实现生态保护与文化传承的和谐统一，才能让三峡石文化永续发展。
+              </p>
+            </div>
+            <div
+              class="md:order-1 rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]"
+            >
+              <img
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/ca63d73c5f94697d10b527a325851f6a.png"
+                alt="石材开采区生态保护"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <!-- 产业融合模块 -->
+          <div
+            class="grid md:grid-cols-2 gap-12 items-center opacity-0 transform translate-y-10 transition-all duration-700"
+            data-animate
+          >
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-stone-800 mb-4">
+                产业融合
+              </h3>
+              <p class="text-stone-600 mb-6 leading-relaxed">
+                三峡石韵项目打破传统产业边界，实现文化、旅游、手工艺、生态农业等多产业融合发展。我们开发了一系列以三峡石文化为主题的文创产品、旅游线路和体验活动，打造完整的产业链条。
+              </p>
+              <p class="text-stone-600 leading-relaxed">
+                通过"文化+旅游+电商"的模式，拓宽销售渠道，提升产品附加值，带动当地经济发展。同时，我们注重品牌建设，打造具有三峡特色的文化IP，提升项目的市场竞争力和影响力。
+              </p>
+            </div>
+            <div
+              class="rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]"
+            >
+              <img
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/e504375301fff0545839daa58b0d7482.png"
+                alt="石文化创意产品展示"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] g4h_项目介绍部分 -- 分为文化传承、生态保护、产业融合三个模块，每个模块使用图文结合的布局展示核心主题 -->
+      <!-- [MODULE] h5i_三峡石记忆馆部分 -->
+      <section id="museum" class="py-20 bg-stone-800 text-stone-100">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold mb-4">
+              三峡石记忆馆
+            </h2>
+            <div class="w-24 h-1 bg-earth-400 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-stone-300">
+              "物灵档案"三峡石记忆馆通过现代科技与传统展示相结合的方式，呈现三峡石文化的深厚底蕴和独特魅力。
+            </p>
+          </div>
+          <div class="relative max-w-5xl mx-auto">
+            <!-- 翻页控制按钮 -->
+            <button
+              id="prev-page"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-stone-700/80 hover:bg-stone-600 text-white w-12 h-12 rounded-full flex items-center justify-center z-10 transition-all duration-300"
+            >
+              <i class="fas fa-chevron-left"> </i>
+            </button>
+            <button
+              id="next-page"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-stone-700/80 hover:bg-stone-600 text-white w-12 h-12 rounded-full flex items-center justify-center z-10 transition-all duration-300"
+            >
+              <i class="fas fa-chevron-right"> </i>
+            </button>
+            <!-- 翻页容器 -->
+            <div
+              id="museum-pages"
+              class="relative h-[500px] overflow-hidden rounded-xl shadow-2xl"
+            >
+              <!-- 展区1：历史渊源 -->
+              <div
+                class="museum-page absolute inset-0 transition-transform duration-700 ease-in-out transform translate-x-0"
+              >
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                  <div class="bg-stone-700 p-8 flex flex-col justify-center">
+                    <div class="mb-6 inline-block">
+                      <span class="text-earth-400 font-medium"> 展区一 </span>
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold mb-4">历史渊源</h3>
+                    <p class="text-stone-300 mb-6 leading-relaxed">
+                      三峡石文化有着数千年的历史，最早可追溯到新石器时代。本展区通过实物、图片和多媒体展示，呈现三峡石文化的起源、发展和演变过程。
+                    </p>
+                    <div class="space-y-4">
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-landmark text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">石器时代</h4>
+                          <p class="text-stone-400">
+                            展示三峡地区出土的新石器时代石器，见证早期人类与石头的密切关系。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-scroll text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">历史文献</h4>
+                          <p class="text-stone-400">
+                            展示历代文献中关于三峡石的记载，呈现石文化的文字传承。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-map-marked-alt text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">地理变迁</h4>
+                          <p class="text-stone-400">
+                            通过互动地图展示三峡地区地质演变与石文化形成的关系。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <img
+                      src="https://design.gemcoder.com/staticResource/echoAiSystemImages/c092ec32ddd76d59e1e24ae2bf5d62d5.png"
+                      alt="历史石器展览"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r from-stone-800 via-stone-800/50 to-transparent md:from-transparent"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 展区2：石雕艺术 -->
+              <div
+                class="museum-page absolute inset-0 transition-transform duration-700 ease-in-out transform translate-x-full"
+              >
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                  <div class="relative order-2 md:order-1">
+                    <img
+                      src="https://design.gemcoder.com/staticResource/echoAiSystemImages/9ae075e5335ace4bf2a967313151371b.png"
+                      alt="石雕艺术展览"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-l from-stone-800 via-stone-800/50 to-transparent md:from-transparent"
+                    ></div>
+                  </div>
+                  <div
+                    class="bg-stone-700 p-8 flex flex-col justify-center order-1 md:order-2"
+                  >
+                    <div class="mb-6 inline-block">
+                      <span class="text-earth-400 font-medium"> 展区二 </span>
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold mb-4">石雕艺术</h3>
+                    <p class="text-stone-300 mb-6 leading-relaxed">
+                      三峡石雕艺术融合了巴蜀文化与楚文化的精髓，形成了独特的艺术风格。本展区展示不同历史时期的石雕作品，展现三峡石雕艺术的演变和成就。
+                    </p>
+                    <div class="space-y-4">
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-monument text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">宗教石雕</h4>
+                          <p class="text-stone-400">
+                            展示佛教、道教等宗教题材的石雕作品，体现宗教文化对石雕艺术的影响。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-user-tie text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">名人雕像</h4>
+                          <p class="text-stone-400">
+                            展示三峡地区历史名人雕像，呈现当地人文精神。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-tools text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">工艺展示</h4>
+                          <p class="text-stone-400">
+                            通过互动装置展示石雕工具和工艺过程，让观众亲身体验石雕艺术。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 展区3：石与生活 -->
+              <div
+                class="museum-page absolute inset-0 transition-transform duration-700 ease-in-out transform translate-x-full"
+              >
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                  <div class="bg-stone-700 p-8 flex flex-col justify-center">
+                    <div class="mb-6 inline-block">
+                      <span class="text-earth-400 font-medium"> 展区三 </span>
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold mb-4">石与生活</h3>
+                    <p class="text-stone-300 mb-6 leading-relaxed">
+                      石头在三峡人民的日常生活中扮演着重要角色，从建筑材料到生活用品，从农具到装饰品，石头的应用无处不在。本展区展示石头与人们生活的密切联系。
+                    </p>
+                    <div class="space-y-4">
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-home text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">石筑民居</h4>
+                          <p class="text-stone-400">
+                            展示三峡地区传统石木结构建筑，体现石头在建筑中的广泛应用。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-utensils text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">生活用具</h4>
+                          <p class="text-stone-400">
+                            展示石磨、石臼、石缸等传统生活用具，见证石头在日常生活中的重要性。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-seedling text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">石与农业</h4>
+                          <p class="text-stone-400">
+                            展示石制农具和水利设施，呈现石头在农业生产中的应用。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <img
+                      src="https://design.gemcoder.com/staticResource/echoAiSystemImages/41b9904b153b04fea326d2cb8327f428.png"
+                      alt="石与生活展示"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r from-stone-800 via-stone-800/50 to-transparent md:from-transparent"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 展区4：现代创新 -->
+              <div
+                class="museum-page absolute inset-0 transition-transform duration-700 ease-in-out transform translate-x-full"
+              >
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                  <div class="relative order-2 md:order-1">
+                    <img
+                      src="https://design.gemcoder.com/staticResource/echoAiSystemImages/16de5da1366e7c22fade857839cd4082.png"
+                      alt="现代石艺创新"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-l from-stone-800 via-stone-800/50 to-transparent md:from-transparent"
+                    ></div>
+                  </div>
+                  <div
+                    class="bg-stone-700 p-8 flex flex-col justify-center order-1 md:order-2"
+                  >
+                    <div class="mb-6 inline-block">
+                      <span class="text-earth-400 font-medium"> 展区四 </span>
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold mb-4">现代创新</h3>
+                    <p class="text-stone-300 mb-6 leading-relaxed">
+                      传统石文化在当代设计师的手中焕发新的生机。本展区展示将传统石文化元素与现代设计理念相结合的创新作品，展现石文化的时代价值。
+                    </p>
+                    <div class="space-y-4">
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-palette text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">艺术创作</h4>
+                          <p class="text-stone-400">
+                            展示当代艺术家以三峡石为灵感创作的现代艺术作品。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p-3 rounded-full mr-4">
+                          <i class="fas fa-couch text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">现代家居</h4>
+                          <p class="text-stone-400">
+                            展示融入石元素的现代家居设计，体现传统与现代的融合。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="bg-earth-500/20 p=3 rounded-full mr-4">
+                          <i class="fas fa-lightbulb text-earth-400"> </i>
+                        </div>
+                        <div>
+                          <h4 class="font-bold text-lg mb-1">科技应用</h4>
+                          <p class="text-stone-400">
+                            展示石材在现代科技领域的创新应用，如环保材料、智能石材等。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 页码指示器 -->
+            <div class="flex justify-center mt-8 space-x-2">
+              <button
+                class="museum-dot w-3 h-3 rounded-full bg-earth-400 transition-all duration-300"
+                data-page="0"
+              ></button>
+              <button
+                class="museum-dot w-3 h-3 rounded-full bg-stone-600 transition-all duration-300"
+                data-page="1"
+              ></button>
+              <button
+                class="museum-dot w-3 h-3 rounded-full bg-stone-600 transition-all duration-300"
+                data-page="2"
+              ></button>
+              <button
+                class="museum-dot w-3 h-3 rounded-full bg-stone-600 transition-all duration-300"
+                data-page="3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] h5i_三峡石记忆馆部分 -- 通过翻页效果展示记忆馆的四个展区：历史渊源、石雕艺术、石与生活、现代创新，每个展区使用图文结合的方式展示展览内容 -->
+      <!-- [MODULE] j6k_文创产品展示 -->
+      <section id="products" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2
+              class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-stone-800 mb-4"
+            >
+              文创产品
+            </h2>
+            <div class="w-24 h-1 bg-earth-500 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-stone-600">
+              我们将三峡石文化元素与现代设计理念相结合，打造独特的文创产品，让石韵之美融入日常生活。
+            </p>
+          </div>
+          <!-- 产品分类标签 -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button
+              class="product-filter active px-6 py-2 rounded-full bg-earth-500 text-white font-medium transition-all duration-300"
+              data-category="all"
+            >
+              全部产品
+            </button>
+            <button
+              class="product-filter px-6 py-2 rounded-full bg-stone-200 text-stone-700 font-medium hover:bg-stone-300 transition-all duration-300"
+              data-category="sculpture"
+            >
+              石雕艺术
+            </button>
+            <button
+              class="product-filter px-6 py-2 rounded-full bg-stone-200 text-stone-700 font-medium hover:bg-stone-300 transition-all duration-300"
+              data-category="home"
+            >
+              石纹家居
+            </button>
+            <button
+              class="product-filter px-6 py-2 rounded-full bg-stone-200 text-stone-700 font-medium hover:bg-stone-300 transition-all duration-300"
+              data-category="apparel"
+            >
+              石韵服饰
+            </button>
+            <button
+              class="product-filter px-6 py-2 rounded-full bg-stone-200 text-stone-700 font-medium hover:bg-stone-300 transition-all duration-300"
+              data-category="decor"
+            >
+              装饰摆件
+            </button>
+          </div>
+          <!-- 产品卡片网格 -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            <!-- 石雕艺术产品 -->
+            <div class="product-card group" data-category="sculpture">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://design.gemcoder.com/staticResource/echoAiSystemImages/bf9f03fc48cb0a31441cf2af84cdff36.png"
+                    alt="手工石雕摆件"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    三峡山水石雕
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    手工雕刻的三峡山水图案摆件，展现三峡壮丽景色。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥598 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card group" data-category="sculpture">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="./images/笔盒1.png"
+                    alt="石佛雕像"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    文创笔盒
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    宁静祥和的石佛雕像，适合冥想空间或书房摆放。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥899 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 石纹家居产品 -->
+            <div class="product-card group" data-category="home">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="./images/马克杯.png"
+                    alt="石纹陶瓷花瓶"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    文创马克杯
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    仿石纹陶瓷花瓶，简约设计，适合现代家居装饰。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥199 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card group" data-category="home">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://design.gemcoder.com/staticResource/echoAiSystemImages/318334a2074b74b96fcf4eb5266125ed.png"
+                    alt="石纹茶具套装"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    石韵茶具套装
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    石纹陶瓷茶具套装，包含茶壶和四个茶杯，品茶佳选。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥368 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 石韵服饰产品 -->
+            <div class="product-card group" data-category="apparel">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://design.gemcoder.com/staticResource/echoAiSystemImages/980c57219d508250e35650c3c4a68891.png"
+                    alt="石纹丝巾"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    石纹真丝围巾
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    印有石纹图案的真丝围巾，优雅大方，时尚配饰。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥258 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card group" data-category="apparel">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="https://design.gemcoder.com/staticResource/echoAiSystemImages/0a5d943ee8e78147899da02a9ceb1afc.png"
+                    alt="石珠手链"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    三峡石珠手链
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    天然三峡石珠手链，每颗珠子都有独特纹理，佩戴舒适。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥128 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 装饰摆件产品 -->
+            <div class="product-card group" data-category="decor">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="./images/纸袋1.png"
+                    alt="石纹壁挂"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py=2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    文创纸袋
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    石纹图案艺术壁挂，为家居墙面增添自然气息。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥299 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card group" data-category="decor">
+              <div
+                class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <img
+                    src="./images/手机壳.png"
+                    alt="石纹烛台"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <button
+                      class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      查看详情
+                    </button>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 text-stone-800">
+                    文创手机壳
+                  </h3>
+                  <p class="text-stone-600 text-sm mb-4">
+                    石纹陶瓷烛台，营造温馨氛围，适合家居装饰。
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-earth-600 font-bold"> ¥158 </span>
+                    <button
+                      class="bg-stone-100 hover:bg-stone-200 p-2 rounded-full transition-colors duration-300"
+                    >
+                      <i class="fas fa-shopping-cart text-stone-700"> </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 查看更多按钮 -->
+          <div class="text-center mt-12">
+            <button
+              class="bg-stone-800 hover:bg-stone-900 text-white px-8 py-3 rounded-full transition-all duration-300"
+            >
+              查看更多产品
+              <i class="fas fa-arrow-right ml-2"> </i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] j6k_文创产品展示 -- 使用卡片式布局展示石雕艺术、石纹家居、石韵服饰、装饰摆件等文创产品，包含产品图片、描述和价格，支持分类筛选 -->
+      <!-- [MODULE] k7l_疗愈空间部分 -->
+       <section class="py-20 relative overflow-hidden" id="healing">
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="自然疗愈环境"
+            class="w-full h-full object-cover"
+            src="https://design.gemcoder.com/staticResource/echoAiSystemImages/3088dfc2b4b28042d058f1adb96fd74b.png"
+          />
+          <div class="absolute inset-0 bg-stone-900/70"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center mb-16">
+            <h2
+              class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-white mb-4"
+            >
+              石韵疗愈空间
+            </h2>
+            <div class="w-24 h-1 bg-earth-400 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-stone-300">
+              在自然与石韵中寻找内心的平静，体验身心的疗愈与放松
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 冥想区 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="冥想区环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/8228f83a3cecea2dfdbf296d19e87768.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-brain text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                冥想区
+              </h3>
+              <p class="text-stone-300 mb-6">
+                静谧的冥想空间，周围环绕天然石材，营造宁静氛围，帮助访客放松身心，减轻压力，提升专注力。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 引导式冥想课程 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 自然声景体验 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 个人冥想空间 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 手工坊 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="手工坊环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/744ecae597b4891bbf88097924dee47f.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-hammer text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                手工坊
+              </h3>
+              <p class="text-stone-300 mb-6">
+                体验传统石雕工艺的乐趣，在专业艺人指导下亲手制作小型石雕作品，感受创作的疗愈力量。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 石雕入门课程 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 石艺创作工作坊 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 亲子石艺活动 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 石浴体验 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="石浴体验环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/fd01c1c08376d8d4e055acd55c4a4fb3.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-hot-tub text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                石浴体验
+              </h3>
+              <p class="text-stone-300 mb-6">
+                利用天然石材的温热特性，进行石浴疗法，促进血液循环，缓解肌肉疲劳，改善睡眠质量。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 热石按摩 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-.2"> </i>
+                  <span> 石板浴体验 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 矿物石疗 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 茶道空间 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="茶道空间环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/4b81d141805e80a9d3e6752a3f61320d.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-mug-hot text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                茶道空间
+              </h3>
+              <p class="text-stone-300 mb-6">
+                在宁静的石韵环境中，体验传统茶道文化，品味三峡地区特色茶品，感受慢生活的禅意。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 茶道体验课程 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 三峡茶文化讲座 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 茶与石韵品鉴会 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 自然步道 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="自然步道环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/bddc472d76d2c56648f3fff941a020f9.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-walking text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                自然步道
+              </h3>
+              <p class="text-stone-300 mb-6">
+                环绕石韵园区的自然步道，沿途设有休息石凳和观景台，让访客在自然中漫步，放松心情。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 石文化解说步道 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 晨练太极场地 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 自然观察路线 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 石韵书屋 -->
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:bg-white/15 p-6"
+            >
+              <img
+                alt="石韵书屋环境"
+                class="w-full h-48 object-cover mb-6"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/644931e3c815591fde545e4fa86a887c.png"
+              />
+              <div
+                class="w-16 h-16 bg-earth-500/30 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-book text-earth-400 text-2xl"> </i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-4">
+                石韵书屋
+              </h3>
+              <p class="text-stone-300 mb-6">
+                收藏石文化、自然疗愈、传统文化等主题书籍的阅读空间，提供安静的阅读和学习环境。
+              </p>
+              <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 石文化主题藏书 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 阅读与分享会 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-earth-400 mr-2"> </i>
+                  <span> 石韵文创阅读角 </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 预约体验按钮 -->
+          <div class="text-center mt-16">
+            <a
+              class="inline-block bg-earth-500 hover:bg-earth-600 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="javascript:void(0);"
+            >
+              预约疗愈体验
+              <i class="fas fa-calendar-alt ml-2"> </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] k7l_疗愈空间部分 -- 展示冥想区、手工坊、石浴体验、茶道空间、自然步道、石韵书屋等互动体验模块，使用背景模糊效果与精美的图像展示空间设计理念 -->
+<!-- [MODULE] p1q_室外空间部分 -->
+      <section class="py-20 bg-stone-100" id="outdoor">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2
+              class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-stone-800 mb-4"
+            >
+              石韵室外空间
+            </h2>
+            <div class="w-24 h-1 bg-earth-500 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-stone-600">
+              融合自然与石文化的户外体验空间，让访客在自然中感受石韵之美
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 石径漫步 -->
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
+            >
+              <img
+                alt="石径漫步"
+                class="w-full h-60 object-cover"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/ef02c484ab9cf371392cc4c341958610.png"
+              />
+              <div class="p-6">
+                <div
+                  class="w-14 h-14 bg-nature-100 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fas fa-walking text-nature-600 text-xl"> </i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-stone-800 mb-3">
+                  石径漫步
+                </h3>
+                <p class="text-stone-600 mb-4">
+                  蜿蜒的石径穿行于自然景观中，沿途设有观景平台和休息石凳，让您在漫步中感受自然与石韵的和谐之美。
+                </p>
+                <ul class="space-y-2 text-stone-600">
+                  <li class="flex items-center">
+                    <i class="fas fa-leaf text-nature-500 mr-2"> </i>
+                    <span class="text-sm"> 四季植物景观 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-info-circle text-earth-500 mr-2"> </i>
+                    <span class="text-sm"> 石文化解说牌 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-camera text-stone-500 mr-2"> </i>
+                    <span class="text-sm"> 摄影打卡点 </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 石绘共融 -->
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
+            >
+              <img
+                alt="石绘共融"
+                class="w-full h-60 object-cover"
+                src="./images/石绘共融.jpg"
+              />
+              <div class="p-6">
+                <div
+                  class="w-14 h-14 bg-earth-100 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fas fa-seedling text-earth-600 text-xl"> </i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-stone-800 mb-3">
+                  石绘共融
+                </h3>
+                <p class="text-stone-600 mb-4">
+                  乡村自然石与创意艺术创作结合，呈现石头在文化创意中的妙用，感受手工艺术与石文化的共融之美。
+                </p>
+                <ul class="space-y-2 text-stone-600">
+                  <li class="flex items-center">
+                    <i class="fas fa-hands-helping text-earth-500 mr-2"> </i>
+                    <span class="text-sm"> 手绘体验活动 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-apple-alt text-nature-500 mr-2"> </i>
+                    <span class="text-sm"> 有机颜料绘画 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-book-open text-stone-500 mr-2"> </i>
+                    <span class="text-sm"> 科普教育 </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 石光剧场 -->
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
+            >
+              <img
+                alt="石光剧场"
+                class="w-full h-60 object-cover"
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/5bd68400e3c04dc3f3bce98a4ecfe1e3.png"
+              />
+              <div class="p-6">
+                <div
+                  class="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fas fa-theater-masks text-stone-600 text-xl"> </i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-stone-800 mb-3">
+                  石光剧场
+                </h3>
+                <p class="text-stone-600 mb-4">
+                  以天然石材打造的露天剧场，结合光影艺术，定期举办石文化主题演出、音乐会和文化活动。
+                </p>
+                <ul class="space-y-2 text-stone-600">
+                  <li class="flex items-center">
+                    <i class="fas fa-music text-earth-500 mr-2"> </i>
+                    <span class="text-sm"> 石韵音乐会 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-mask text-stone-500 mr-2"> </i>
+                    <span class="text-sm"> 传统戏剧表演 </span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-camera text-nature-500 mr-2"> </i>
+                    <span class="text-sm"> 光影艺术展 </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] p1q_室外空间部分 -- 展示石径漫步、石田共生、石光剧场等户外体验空间，结合自然景观与石文化元素，提供多样化的户外活动体验 -->
+
+
+
+      <!-- [MODULE] l8m_项目合作与参与部分 -->
+      <section id="cooperation" class="py-20 bg-stone-100">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2
+              class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-stone-800 mb-4"
+            >
+              项目合作与参与
+            </h2>
+            <div class="w-24 h-1 bg-earth-500 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-stone-600">
+              三峡石韵项目致力于与各方合作，共同推动石文化传承与乡村发展，欢迎您的参与和支持。
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-stone-800 mb-6">
+                合作社与社区参与
+              </h3>
+              <div class="space-y-6">
+                <div class="flex">
+                  <div class="flex-shrink-0 mr-4">
+                    <div
+                      class="w-12 h-12 bg-earth-100 rounded-full flex items-center justify-center text-earth-600"
+                    >
+                      <i class="fas fa-users"> </i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2 text-stone-800">
+                      社区合作社模式
+                    </h4>
+                    <p class="text-stone-600">
+                      成立三峡石文化合作社，组织当地村民参与石材采集、加工、文创产品制作等环节，实现利益共享，共同发展。
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-shrink-0 mr-4">
+                    <div
+                      class="w-12 h-12 bg-earth-100 rounded-full flex items-center justify-center text-earth-600"
+                    >
+                      <i class="fas fa-hands-helping"> </i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2 text-stone-800">
+                      技能培训计划
+                    </h4>
+                    <p class="text-stone-600">
+                      开展石雕技艺、文创设计、电商运营等技能培训，提升当地居民就业能力，促进产业发展。
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-shrink-0 mr-4">
+                    <div
+                      class="w-12 h-12 bg-earth-100 rounded-full flex items-center justify-center text-earth-600"
+                    >
+                      <i class="fas fa-home"> </i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2 text-stone-800">
+                      乡村振兴示范
+                    </h4>
+                    <p class="text-stone-600">
+                      以石文化产业为引领，带动乡村旅游、民宿餐饮、农产品销售等相关产业发展，打造乡村振兴示范项目。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://design.gemcoder.com/staticResource/echoAiSystemImages/a996df08cb14a35cf86921557f79a07f.png"
+                alt="社区合作社石艺工作坊"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+              <div>
+                <h3 class="text-2xl font-serif font-bold text-stone-800 mb-6">
+                  合作方式
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="bg-nature-100 p-2 rounded-full mr-4 mt-1">
+                      <i class="fas fa-handshake text-nature-600"> </i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-stone-800 mb-1">
+                        文化机构合作
+                      </h4>
+                      <p class="text-stone-600 text-sm">
+                        与博物馆、美术馆、文化研究机构合作，共同开展石文化研究与展览。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-nature-100 p-2 rounded-full mr-4 mt-1">
+                      <i class="fas fa-building text-nature-600"> </i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-stone-800 mb-1">企业合作</h4>
+                      <p class="text-stone-600 text-sm">
+                        与文创企业、旅游企业、设计公司等合作，共同开发产品和市场。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-nature-100 p-2 rounded-full mr-4 mt-1">
+                      <i class="fas fa-university text-nature-600"> </i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-stone-800 mb-1">学术合作</h4>
+                      <p class="text-stone-600 text-sm">
+                        与高校、研究机构合作，开展石文化研究、人才培养和技术创新。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-nature-100 p-2 rounded-full mr-4 mt-1">
+                      <i class="fas fa-globe text-nature-600"> </i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-stone-800 mb-1">国际交流</h4>
+                      <p class="text-stone-600 text-sm">
+                        开展国际石文化交流活动，促进中外石文化艺术的交流与合作。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-serif font-bold text-stone-800 mb-6">
+                  联系我们
+                </h3>
+                <form class="space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        for="name"
+                        class="block text-sm font-medium text-stone-700 mb-1"
+                      >
+                        姓名
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 transition-colors duration-300"
+                        placeholder="您的姓名"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-stone-700 mb-1"
+                      >
+                        邮箱
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 transition-colors duration-300"
+                        placeholder="您的邮箱"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-stone-700 mb-1"
+                    >
+                      主题
+                    </label>
+                    <select
+                      id="subject"
+                      class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 transition-colors duration-300"
+                    >
+                      <option value>请选择合作主题</option>
+                      <option value="cultural">文化交流合作</option>
+                      <option value="product">产品开发合作</option>
+                      <option value="tourism">旅游合作</option>
+                      <option value="education">教育培训合作</option>
+                      <option value="other">其他合作</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-sm font-medium text-stone-700 mb-1"
+                    >
+                      留言
+                    </label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 transition-colors duration-300"
+                      placeholder="请详细描述您的合作意向或问题"
+                    >
+                    </textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-earth-500 hover:bg-earth-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300"
+                  >
+                    提交合作意向
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- [/MODULE] k7l_疗愈空间部分 -- 展示冥想区、手工坊、石浴体验、茶道空间、自然步道、石韵书屋等互动体验模块，使用背景模糊效果与精美的图像展示空间设计理念 -->
+      <!-- [/MODULE] l8m_项目合作与参与部分 -- 展示合作社与社区参与模式，包括社区合作社、技能培训计划和乡村振兴示范，提供合作方式说明和联系表单 -->
+      <!-- [MODULE] m9n_底部部分 -->
+      <footer class="bg-stone-900 text-stone-300 py-12">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
+          >
+            <div>
+              <div class="flex items-center space-x-2 mb-6">
+                <div
+                  class="w-10 h-10 rounded-full bg-earth-400 flex items-center justify-center"
+                >
+                  <i class="fas fa-mountain text-white text-xl"> </i>
+                </div>
+                <span class="text-2xl font-serif font-bold text-white">
+                  三峡石韵
+                </span>
+              </div>
+              <p class="text-stone-400 mb-6">
+                让石韵文化与乡村美学在现代生活中生根发芽，促进文化传承与乡村振兴。
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="javascript:void(0);"
+                  class="bg-stone-800 hover:bg-earth-500 text-stone-300 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <i class="fab fa-weixin"> </i>
+                </a>
+                <a
+                  href="javascript:void(0);"
+                  class="bg-stone-800 hover:bg-earth-500 text-stone-300 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <i class="fab fa-weibo"> </i>
+                </a>
+                <a
+                  href="javascript:void(0);"
+                  class="bg-stone-800 hover:bg-earth-500 text-stone-300 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <i class="fab fa-instagram"> </i>
+                </a>
+                <a
+                  href="javascript:void(0);"
+                  class="bg-stone-800 hover:bg-earth-500 text-stone-300 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <i class="fab fa-youtube"> </i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white text-lg font-bold mb-6">快速链接</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#overview"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    项目概述
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#introduction"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    项目介绍
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#museum"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    三峡石记忆馆
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#products"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    文创产品
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#healing"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    疗愈空间
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#cooperation"
+                    class="text-stone-400 hover:text-earth-400 transition-colors duration-300"
+                  >
+                    合作参与
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white text-lg font-bold mb-6">联系我们</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="fas fa-map-marker-alt text-earth-400 mt-1 mr-3">
+                  </i>
+                  <span class="text-stone-400">
+                    湖北省宜昌市三峡坝区石韵文化园
+                  </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-phone text-earth-400 mr-3"> </i>
+                  <span class="text-stone-400"> +86 717-1234567 </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-envelope text-earth-400 mr-3"> </i>
+                  <span class="text-stone-400"> contact@sxsy.com </span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-clock text-earth-400 mr-3"> </i>
+                  <span class="text-stone-400"> 周一至周日 9:00-17:00 </span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white text-lg font-bold mb-6">订阅通讯</h4>
+              <p class="text-stone-400 mb-4">
+                订阅我们的电子通讯，获取项目最新动态和活动信息。
+              </p>
+              <form class="mb-4">
+                <div class="flex">
+                  <input
+                    type="email"
+                    placeholder="您的邮箱地址"
+                    class="flex-1 px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-earth-500 text-stone-800"
+                  />
+                  <button
+                    type="submit"
+                    class="bg-earth-500 hover:bg-earth-600 text-white px-4 py-2 rounded-r-lg transition-colors duration-300"
+                  >
+                    订阅
+                  </button>
+                </div>
+              </form>
+              <p class="text-stone-500 text-sm">
+                我们尊重您的隐私，不会向第三方分享您的信息。
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-t border-stone-800 pt-8 text-center text-stone-500 text-sm"
+          >
+            <p>© 2023 三峡石韵文化发展有限公司 版权所有 | 鄂ICP备12345678号</p>
+          </div>
+        </div>
+      </footer>
+      <!-- [/MODULE] m9n_底部部分 -- 包含项目简介、快速链接、联系信息和订阅通讯功能，以及版权声明 -->
+    </div>
+    <!-- [/MODULE] a1b_主内容区域 -- 包含整个网站的所有内容模块 -->
+    <!-- [JSMOD] n0p_页面交互脚本 -->
+    <script id="page-interactions">
+      // 页面加载时初始化
+      document.addEventListener('DOMContentLoaded', function () {
+        // 导航栏滚动效果
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add('bg-stone-900/95', 'bg-blur', 'shadow-lg');
+            navbar.classList.remove('bg-transparent');
+          } else {
+            navbar.classList.remove('bg-stone-900/95', 'bg-blur', 'shadow-lg');
+            navbar.classList.add('bg-transparent');
+          }
+        });
+
+        // 移动端菜单切换
+        var menuToggle = document.getElementById('menu-toggle');
+        var mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+          // 切换图标
+          var icon = menuToggle.querySelector('i');
+          if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 如果是移动菜单点击，关闭菜单
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+              var icon = menuToggle.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+            var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // 记忆馆翻页效果
+        var museumPages = document.getElementById('museum-pages');
+        var pageElements = document.querySelectorAll('.museum-page');
+        var prevButton = document.getElementById('prev-page');
+        var nextButton = document.getElementById('next-page');
+        var dots = document.querySelectorAll('.museum-dot');
+        var currentPage = 0;
+        var totalPages = pageElements.length;
+        function updatePage() {
+          pageElements.forEach(function (page, index) {
+            if (index === currentPage) {
+              page.style.transform = 'translateX(0)';
+            } else if (index < currentPage) {
+              page.style.transform = 'translateX(-100%)';
+            } else {
+              page.style.transform = 'translateX(100%)';
+            }
+          });
+
+          // 更新指示器
+          dots.forEach(function (dot, index) {
+            if (index === currentPage) {
+              dot.classList.add('bg-earth-400');
+              dot.classList.remove('bg-stone-600');
+            } else {
+              dot.classList.remove('bg-earth-400');
+              dot.classList.add('bg-stone-600');
+            }
+          });
+        }
+        prevButton.addEventListener('click', function () {
+          currentPage = (currentPage - 1 + totalPages) % totalPages;
+          updatePage();
+        });
+        nextButton.addEventListener('click', function () {
+          currentPage = (currentPage + 1) % totalPages;
+          updatePage();
+        });
+        dots.forEach(function (dot, index) {
+          dot.addEventListener('click', function () {
+            currentPage = index;
+            updatePage();
+          });
+        });
+
+        // 产品筛选
+        var productFilters = document.querySelectorAll('.product-filter');
+        var productCards = document.querySelectorAll('.product-card');
+        productFilters.forEach(function (filter) {
+          filter.addEventListener('click', function () {
+            // 更新按钮样式
+            productFilters.forEach(function (btn) {
+              btn.classList.remove('bg-earth-500', 'text-white');
+              btn.classList.add('bg-stone-200', 'text-stone-700');
+            });
+            filter.classList.remove('bg-stone-200', 'text-stone-700');
+            filter.classList.add('bg-earth-500', 'text-white');
+            var category = filter.getAttribute('data-category');
+
+            // 筛选产品
+            productCards.forEach(function (card) {
+              if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+
+        // 滚动动画
+        var animateElements = document.querySelectorAll('[data-animate]');
+        function checkInView() {
+          animateElements.forEach(function (element) {
+            var elementTop = element.getBoundingClientRect().top;
+            var elementBottom = element.getBoundingClientRect().bottom;
+            var isVisible = elementTop < window.innerHeight - 100 && elementBottom > 0;
+            if (isVisible) {
+              element.classList.remove('opacity-0', 'translate-y-10');
+              element.classList.add('opacity-100', 'translate-y-0');
+            }
+          });
+        }
+
+        // 初始检查
+        checkInView();
+
+        // 滚动时检查
+        window.addEventListener('scroll', checkInView);
+      });
+    </script>
+    <!-- [/JSMOD] n0p_页面交互脚本 -- 实现导航栏滚动效果、移动端菜单切换、平滑滚动、记忆馆翻页效果、产品筛选和滚动动画等交互功能 -->
+  </body>
+</html>
